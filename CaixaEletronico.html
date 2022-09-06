@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Caixa Eletrônico</title>
+
+	<script>
+
+			
+		
+		var saldo = 100; //Variavel Global
+		var nome = " ";
+		
+		
+		
+
+		function inicio() {
+			//ESCOPO
+			//Variavel Local
+
+
+
+			var escolha = parseInt(prompt('Selecione uma opção \n 1.) Saldo\n 2.) Extrato\n 3.) Saque \n 4.)Depósito\n 5.)transferência \n6.) Sair'));
+				
+			switch(escolha){
+
+				case 1:
+					ver_saldo(); 
+				break;
+				
+				case 2:
+					extrato();
+				break;
+
+				case 3:
+					fazer_saque();
+				break;
+
+				case 4:
+				fazer_deposito();
+				break;
+
+				case 5:
+					transfe();
+				break;
+
+				case 6:
+					sair();
+				break;
+
+				default:
+					erro();
+
+					
+
+			}
+
+		}
+
+		
+		function nome_usu(){
+			
+			nome = prompt("Qual é o seu nome?");
+			var cpf =  parseFloat(prompt("cpf"));
+
+			if(isNaN(cpf)){
+
+				alert("somente número No CPF");
+				nome_usu();
+			}
+			else
+			{
+			alert("Olá "+ nome +" é um prazer ter você por aqui!");
+			inicio();
+			}
+		}
+			
+
+		
+
+		function ver_saldo() {
+			
+			alert('Seu saldo atual é: ' + saldo);
+			inicio();
+		}
+
+		function fazer_deposito() {
+			
+			var deposito = parseFloat(prompt('Qual o valor para depósito?'));
+			
+			// Not a Number --> Isso é um não-número?
+			if (isNaN(deposito) || deposito === '') {
+				alert('Por favor, informe um número.');
+				fazer_deposito();
+			}
+			else if(deposito <= 0){
+
+				alert("Operação não autorizada");
+				fazer_deposito();
+
+			} 
+			else {
+				saldo += deposito;
+				//saldo = saldo + deposito;
+				ver_saldo();
+			}
+		}
+
+		function fazer_saque() {
+			
+			senha();
+
+
+			var saque = parseFloat(prompt('Qual o valor para saque?'));
+			
+			if (isNaN(saque) || saque === '') {
+				alert('Por favor, informe um número.');
+				fazer_saque();
+			} 
+			else if(saque <= 0 || saque > saldo){
+
+				alert("Operação não autorizada");
+				inicio();
+			}
+			else {
+				saldo -= saque;
+				//saldo = saldo - saque;
+				ver_saldo();
+			}
+		}
+
+		function extrato() {
+
+			senha();
+
+			if(nome == "Gabriel"){
+
+				alert("compra no débito \n -R$ 47,78 \n Kit Crescimento Capilar \n \n compra no débito \n -R$ 23,90 \n bengala\n \n compra no débito \n -R$ 12,90 \n Bolo de cenoura");
+				inicio();
+			}
+			else {
+				alert("compra no débito \n -R$ 47,78 \n torta \n \n compra no débito \n -R$ 23,90 \n camiseta \n \n compra no débito \n -R$ 2,90 \n chocolate");
+				inicio();
+			}
+			
+			
+		}
+		function transfe(){
+
+			senha();
+
+		var conta = parseFloat(prompt("digite o número da conta"));
+		
+		
+		 if(isNaN(conta) || conta === '' || conta <= 0) {
+				alert('Por favor, informe um número.');
+				transfe();
+
+		}
+		var tra = parseFloat(prompt("valor da transferência"));
+		if(tra <=0 || tra > saldo || isNaN(tra)){
+
+			alert("Operação não autorizada");
+			transfe();
+
+		}
+		else{
+			
+			saldo -= tra;
+			ver_saldo();
+		}
+		}
+		function senha(){
+			//3589
+			var senha = parseInt(prompt("qual é sua senha"))
+
+			if(senha != 3589){
+
+				alert("senha incorreta");
+				inicio();
+			}
+			else{
+
+				alert("carregando");
+			}
+
+
+		}
+
+		function erro() {
+			alert('Por favor, informe um número entre 1 e 6.');
+			inicio();
+		}
+
+		function sair() {
+			var confirma = confirm('Você deseja sair?');
+			if (confirma) {
+				window.close();
+			} else {
+				inicio();
+			}
+		}
+		
+        nome_usu();
+		
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
