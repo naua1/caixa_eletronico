@@ -8,12 +8,18 @@ Nessa atividade eu tinha que pegar um código já pronto de um Banco e melhorar 
 
 tecnologias usadas: javascrpit.
 
+# Atividade: Melhorando e Corrigindo Código de Banco
 
-"No mundo do desenvolvimento o pensamento crítico é a parte mais importante. Com um pensamento apurado, você consegue fazer melhores perguntas, ser mais assertivo nas ações e no desenvolvimento. 
+## Descrição
 
-Exatamente por isso, mantenha muita atenção no que é solicitado abaixo. Pense com cuidado, planeje e execute. Dessa vez, vocês estão alterando um código pronto e aplicando sua visão. 
-Mantenha na cabeça que qualquer alteração não vai quebrar o mundo... Então experimente tudo o que quiser experimentar. Brinque bastante e altere tudo o que quiser alterar. 
+Nesta atividade, nossa tarefa era trabalhar com um código de sistema bancário já existente, identificar e corrigir erros, além de fazer melhorias no código para torná-lo mais eficiente e seguro. O projeto envolvia o desenvolvimento e aprimoramento de funcionalidades de um sistema bancário simulado.
 
-Com o projeto de desenvolvimento de caixa eletrônico, por exemplo, encontramos algumas questões que são muito importantes, mas não foram aplicadas. 
+## Objetivos
 
-Vamos aplicá-las uma a uma. "
+Os principais objetivos desta atividade incluíam:
+
+1. **Identificar Erros**: Analisar o código existente em busca de erros, bugs e vulnerabilidades de segurança que precisavam ser corrigidos.
+
+2. **Melhorar a Eficiência**: Refatorar o código para torná-lo mais eficiente em termos de desempenho e uso de recursos.
+
+3. **Aprimorar Funcionalidades**: Adicionar ou aprimorar funcionalidades do sistema bancário, como transferências, consultas de saldo, abertura de contas, etc.
