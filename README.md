@@ -4,8 +4,6 @@
 
 ## Atividade do Instituto Proa 
 
-Nessa atividade eu tinha que pegar um código já pronto de um Banco e melhorar ou adicionar funções neles.
-
 tecnologias usadas: javascrpit.
 
 # Atividade: Melhorando e Corrigindo Código de Banco
